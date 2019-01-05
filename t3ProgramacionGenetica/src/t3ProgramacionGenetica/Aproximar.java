@@ -13,7 +13,7 @@ public class Aproximar {
 	AST[] generacion;
 	int nSobrevivientes;
 	
-	public Aproximar(int x, int[] numeros, String[] operaciones, int n, double mr, int profundidad) {
+	public Aproximar(int x, int[] numeros, String[] operaciones, int n, double mr) {
 		this.numero = x;
 		this.numeros = numeros;
 		this.operaciones = operaciones;
@@ -22,7 +22,7 @@ public class Aproximar {
 		this.nSobrevivientes = n / 4 + 1;
 		generacion = new AST[n];
 		for(int k = 0; k < n; k++) {
-			generacion[k] = new AST(profundidad, numeros, operaciones, true);
+			generacion[k] = new AST(5, numeros, operaciones, true);
 		}
 	}
 	
@@ -71,7 +71,7 @@ public class Aproximar {
 		System.out.println("tamanio de cada generacion: " + this.generacion.length);
 		System.out.println("tasa de mutacion: " + this.tasaMutacion);
 		System.out.println("distancia: " + distancia);
-		//BTreePrinter.printNode(this.getMasCercana());
+		BTreePrinter.printNode(this.getMasCercana());
 	}
 	
 	public AST getMasCercana() {

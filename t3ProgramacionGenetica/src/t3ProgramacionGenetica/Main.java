@@ -6,6 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		int[] vals = {1, 2, 3};
 		String[] ops = {"+", "-", "*"};
+		
 		/*
 		AST ast = new AST(3, vals, ops, true);
 		AST ast2 = new AST(3, vals, ops, true);
@@ -19,9 +20,10 @@ public class Main {
 		System.out.println(cruza.evaluar());
 		*/
 		
-		//Aproximar(numero objetivo, terminales, operaciones, tamaño de las generaciones, tasa de mutacion, profundidad inicial)
-		Aproximar t1 = new Aproximar(100, vals, ops, 10, 0.1, 5);
+		//Aproximar(numero objetivo, terminales, operaciones, tamaño de las generaciones, tasa de mutacion)
+		Aproximar t1 = new Aproximar(100, vals, ops, 50, 0.1);
 		t1.ejecutar();
+		
 		
 	}
 
