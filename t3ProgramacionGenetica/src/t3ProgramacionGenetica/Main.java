@@ -19,6 +19,7 @@ public class Main {
 		System.out.println(cruza.evaluar());
 		*/
 		
+		//Aproximar(numero objetivo, terminales, operaciones, tamaño de las generaciones, tasa de mutacion, profundidad inicial)
 		Aproximar t1 = new Aproximar(100, vals, ops, 10, 0.1, 5);
 		t1.ejecutar();
 		
